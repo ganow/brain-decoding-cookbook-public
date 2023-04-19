@@ -30,3 +30,11 @@ $ docker compose run -d app python recon_icnn_image_vgg19_dgn_relu7gen_gd.py con
 ```
 
 After executing the above command, see `reconstruction/data/reconstruction/icnn/vgg19_dgn_relu7gen_gd_1000iter_pytorch/decoded/deeprecon_originals/sub-01/VC/recon_image_normalized-n01621127_19020.tiff`.
+
+### Pytorch 1.7.1
+
+```bash
+$ # in host machine
+$ docker compose build torch171
+$ docker compose run -d torch171 python recon_icnn_image_vgg19_dgn_relu7gen_gd.py config/torch171.yaml
+```
