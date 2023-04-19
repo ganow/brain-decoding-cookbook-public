@@ -23,7 +23,9 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Pip packages
-RUN pip install bdpy
+RUN pip install \
+        bdpy \
+        pandas
 
 USER ${USER_NAME}
 WORKDIR ${APPLICATION_DIRECTORY}

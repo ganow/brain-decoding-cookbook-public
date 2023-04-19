@@ -13,9 +13,10 @@ services:
       - type: bind
         source: ./
         target: /home/user/brain-decoding-cookbook
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - driver: nvidia
-    #           capabilities: [gpu]
+    working_dir: /home/user/brain-decoding-cookbook/reconstruction
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
