@@ -23,6 +23,8 @@ Prior to the following, prepare all the datasets by executing `download.sh` insi
 
 ```bash
 $ # in host machine
+$ git clone -b reproduce-in-docker https://github.com/ganow/brain-decoding-cookbook-public.git
+$ cd brain-decoding-cookbook-public
 $ docker compose build app
 $ docker compose run -d app python recon_icnn_image_vgg19_dgn_relu7gen_gd.py config/recon_icnn_vgg19_dgn_relu7gen_gd_1000iter_decoded_deeprecon_originals.yaml
 ```
