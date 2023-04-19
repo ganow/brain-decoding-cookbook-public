@@ -14,13 +14,13 @@ RUN groupadd -g ${GID} ${GROUP_NAME} \
 
 # Basic packages
 RUN apt-get update \
- && apt-get install -y --no-install-recommends \
+    && apt-get install -y --no-install-recommends \
         git \
         wget \
         zip \
         unzip \
- && apt-get -y clean \
- && rm -rf /var/lib/apt/lists/*
+    && apt-get -y clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # Pip packages
 RUN pip install bdpy
