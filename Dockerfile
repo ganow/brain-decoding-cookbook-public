@@ -18,6 +18,7 @@ RUN apt-get update \
         git \
         wget \
         zip \
+        unzip \
  && apt-get -y clean \
  && rm -rf /var/lib/apt/lists/*
 
